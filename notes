@@ -31,3 +31,9 @@ but from v4, instead of config, it will take ./src/index.js as default file
 create index.js under src/ and then run 'npm run build'
 
 
+Prod and Development modes:
+"dev": "webpack --mode development",
+"prod": "webpack --mode production"
+
+webpack 4 uses development and production mode (mode flag) to do different things depending on the env without any other usage of plugins like Uglify for minifying in production,
+the production env does "Tree Shaking, Minifying, Scope hoisting etc"
